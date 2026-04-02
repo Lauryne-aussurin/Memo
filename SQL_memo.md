@@ -4,7 +4,7 @@ créer un utilisateur avec mdp
 ``` SQL
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'mdp';
 ```
-//différentes contraintes pour les comptes : 
+Différentes contraintes pour les comptes : 
 
 ```
 PASSWORD EXPIRE NEVER
@@ -21,4 +21,11 @@ ACCOUNT LOCK
 ```
 WITH MAX_USER_CONNECTIONS 1
 ```
+Afficher les différents user : 
+
+``` SQL
+Select User, Host, Password FROM mysql.user;
+```
+
+
 
